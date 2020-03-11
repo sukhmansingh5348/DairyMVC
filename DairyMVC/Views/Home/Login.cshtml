@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+
+<div class="services">
+    <div class="container">
+        <h3 class="agileinfo_header">Admin Login </h3>
+       
+        <div class="agileinfo_mail_grids">
+            <form method="post" action="sendLoginCheck">
+                <span class="input input--chisato">
+                    <span class="input__label-content input__label-content--chisato" data-content="Name">User Name</span>
+                    <br/>
+                    <input id="User" class="input__field input__field--chisato" type="text" required="" name="User" />
+
+
+
+
+
+                   
+                </span>
+                <br/>
+                <span class="input input--chisato">
+                    <span class="input__label-content input__label-content--chisato" data-content="Email">Password</span>
+                    <br/>
+                    <input id="Password" type="text" name="Password" class="input__field input__field--chisato" required="" />
+
+
+                </span>
+
+
+
+                <br style="clear:both;" />
+
+                <input id="BtnSend " type="submit" value="Sign In " />
+
+
+
+                <div id="data" runat="server">
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

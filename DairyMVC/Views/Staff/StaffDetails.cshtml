@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DairyMVC.Models.tblStaff>
+
+@{
+    ViewBag.Title = "StaffDetails";
+}
+
+<h2>StaffDetails</h2>
+
+<p>
+    @Html.ActionLink("Add New Staff", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>Update </th>
+        <th>Delete </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            <span class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = item.id }) </span></td>
+            
+          <td>
+              <span class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.id })</span>
+        </td>
+    </tr>
+}
+
+</table>
+<a href="@Url.Action("Login","Home")">Back to Main Page </a>
